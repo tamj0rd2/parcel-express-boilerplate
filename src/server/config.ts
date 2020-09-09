@@ -4,8 +4,10 @@ export interface ServerConfig {
 }
 
 export const getServerConfig = (): ServerConfig => {
+  if (!process.env.PORT) throw new Error('No port!')
+
   return {
-    PORT: 8080,
+    PORT: parseInt(process.env.PORT),
     ALLOWED_CREDENTIALS: {
       username: 'password',
     },

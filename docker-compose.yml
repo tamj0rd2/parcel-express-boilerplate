@@ -2,6 +2,20 @@ version: '3.7'
 services:
   web:
     build: .
+    environment:
+      - PORT=8080
+
+  lint:
+    build:
+      context: .
+      target: tests
+    command: npm run lint
+
+  typecheck:
+    build:
+      context: .
+      target: tests
+    command: npm run typecheck
 
   unit-tests:
     build:
