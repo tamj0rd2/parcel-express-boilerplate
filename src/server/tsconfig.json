@@ -17,10 +17,14 @@
     "sourceMap": true,
     "composite": true,
     "paths": {
-      "~shared": ["./src/shared/*"],
-      "~*": ["./src/*"]
+      "~shared/*": ["./src/shared/*"],
+      "~server/*": ["./src/server/*"]
     }
   },
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules", "lib"]
+  "references": [
+    {
+      "path": "../shared/tsconfig.json"
+    }
+  ],
+  "include": ["./**/*.ts"]
 }

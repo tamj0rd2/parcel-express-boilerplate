@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
 
-export const healthCheckHandler: RequestHandler = (_, res, next) => {
+export const healthCheckHandler: RequestHandler = (_, res) => {
   res.status(200).send('Nice stuff!')
 }

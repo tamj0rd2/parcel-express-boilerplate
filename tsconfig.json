@@ -3,7 +3,13 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "~shared/*": ["./src/shared/*"],
+      "~server/*": ["./src/server/*"],
+      "~client/*": ["./src/client/*"]
+    }
   },
   "references": [
     {
