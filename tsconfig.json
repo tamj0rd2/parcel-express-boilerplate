@@ -19,5 +19,5 @@
       "path": "./src/server/tsconfig.json"
     }
   ],
-  "exclude": ["out", "dist", ".cache", "node_modules"]
+  "exclude": ["out", "dist", ".cache", "node_modules", "black-box-tests"]
 }

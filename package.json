@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:acceptance": "echo \"Error: no test specified\" && exit 1",
+    "test:acceptance": "npm i --prefix ./black-box-tests/acceptance-tests && npm test --prefix ./black-box-tests/acceptance-tests",
     "dev": "ts-node -P ./src/server/tsconfig.json ./src/server/dev.ts",
     "build": "tsc -b ./src/server/tsconfig.json",
     "start": "NODE_ENV=production node -r module-alias/register -r source-map-support/register ./out/server/index.js",
@@ -62,6 +62,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
     "lint-staged": "^10.3.0",
     "parcel-bundler": "^1.12.4",
