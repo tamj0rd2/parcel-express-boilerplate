@@ -55,7 +55,7 @@ docker-compose $DC_FLAGS up -d web
 #==
 
 print $BLUE 'running accessibility and acceptance tests'
-docker-compose $DC_FLAGS build -q --parallel pa11y_tests acceptance-tests
-docker-compose $DC_FLAGS up pa11y_tests acceptance-tests
+docker-compose $DC_FLAGS build -q --parallel accessibility-tests acceptance-tests
+docker-compose $DC_FLAGS up accessibility-tests acceptance-tests
 ENDGAME_FAIL_COUNT=$(docker-compose ps -q | xargs docker inspect -f '{{ .State.ExitCode }}' | grep -v 0 | wc -l | tr -d '[:space:]')
 if [ $ENDGAME_FAIL_COUNT -ne 0 ]; then exit 1; fi

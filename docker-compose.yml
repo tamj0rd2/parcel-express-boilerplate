@@ -8,3 +8,10 @@ services:
       context: .
       target: tests
     command: npm run test -- --maxWorkers=4
+
+  accessibility-tests:
+    build: ./black-box-tests/accessibility-tests
+    depends_on:
+      - web
+    environment:
+      - WEB_HOST=http://web:8080

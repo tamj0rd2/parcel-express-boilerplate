@@ -1,0 +1,16 @@
+{
+  "name": "accessibility-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "pa11y-ci": "^2.3.0"
+  },
+  "scripts": {
+    "test:ci": "wait-on -t 20000 http://web:8080 && pa11y-ci --config pa11y.conf.js",
+    "test": "wait-on -t 20000 http://localhost:8080 && node ./test.js"
+  },
+  "devDependencies": {
+    "wait-on": "^4.0.1"
+  }
+}
