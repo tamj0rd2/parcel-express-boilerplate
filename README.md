@@ -36,3 +36,8 @@ During development, you might just want to run a subset of the tests locally.
 
 - Unit and integration tests: `npm run test` or `npm run test:watch`
 - Acceptance tests: `npm run test:acceptance`
+
+## Deployment
+
+The app is deployed automatically as part of a CI pipeline. When code is pushed
+to master and all CI tests succeed, the code will be deployed to live.

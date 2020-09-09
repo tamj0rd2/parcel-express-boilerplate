@@ -21,6 +21,7 @@ jobs:
       - name: Unit Tests
         run: docker-compose -f docker-compose.yml up --build --exit-code-from unit-tests unit-tests
 
+
         # - name: Integration tests
         #   run: docker-compose -f docker-compose.yml up --build --exit-code-from integration-tests integration-tests
       - name: Acceptance tests
@@ -38,6 +39,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to heroku
-        run: ./deploy.sh
+        run: ./scripts/deploy.sh
         env:
-          HEROKU_API_KEY: ${{ secrets.RENT_SCRAPER_HEROKU_API_KEY }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_APP_TOKEN }}
