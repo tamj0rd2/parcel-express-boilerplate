@@ -23,7 +23,7 @@ print 'logging in'
 heroku container:login
 
 print 'pushing container'
-heroku container:push web -a rent-scraper
+heroku container:push web -a threads-poc
 
 print 'releasing container'
-heroku container:release web -a rent-scraper
+heroku container:release web -a threads-poc
