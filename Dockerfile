@@ -11,5 +11,5 @@ COPY . .
 FROM base as tests
 
 FROM base as app
-RUN npm build
+RUN npm run build
 CMD ["npm", "start"]
