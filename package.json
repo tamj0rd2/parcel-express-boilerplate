@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node -P ./src/server/tsconfig.json ./src/server/dev.ts",
     "build": "tsc -b ./src/server/tsconfig.json",
-    "start": "NODE_ENV=production node -r source-map-support/register ./out/server/index.js"
+    "start": "NODE_ENV=production node -r source-map-support/register ./out/server/index.js",
+    "typecheck": "tsc -b ./tsconfig.json"
   },
   "_moduleAliases": {
     "~shared": "./out/shared",

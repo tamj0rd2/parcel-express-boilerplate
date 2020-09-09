@@ -1,6 +1,5 @@
 import { Router } from "express"
 import { healthCheckHandler } from "./healthcheck"
-import { resolve } from "path"
 
 export function createApiRouter() {
   const router = Router()

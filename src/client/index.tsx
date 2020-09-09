@@ -18,6 +18,7 @@ const App = () => {
 
   return (
     <main>
+      <a href="/logout">Log out</a>
       <h1>Hello :)</h1>
       <h2>{response}</h2>
     </main>
