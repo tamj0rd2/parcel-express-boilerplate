@@ -7,7 +7,7 @@ export const getServerConfig = (): ServerConfig => {
   return {
     PORT: 8080,
     ALLOWED_CREDENTIALS: {
-      username: 'password'
-    }
+      username: 'password',
+    },
   }
 }

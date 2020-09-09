@@ -1,6 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { inspect } from 'util'
-
 export const mockObj = <T>(thing: Partial<T>): jest.Mocked<T> => thing as jest.Mocked<T>
 
 export const mockCtor = (target: jest.Constructable) => target as jest.MockedClass<typeof target>

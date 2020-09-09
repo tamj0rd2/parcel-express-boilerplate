@@ -1,7 +1,7 @@
-import { Router } from "express"
-import { healthCheckHandler } from "./healthcheck"
+import { Router } from 'express'
+import { healthCheckHandler } from './healthcheck'
 
-export function createApiRouter() {
+export function createApiRouter(): Router {
   const router = Router()
   router.get('/healthcheck', healthCheckHandler)
   router.use((_, res) => {
