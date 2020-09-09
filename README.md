@@ -4,7 +4,8 @@
 
 ### Getting started
 
-Before you can follow these steps, you'll need to download node version 12 LTS
+Before you can follow these steps, you'll need to download node version 12 LTS.
+If you have `nvm` installed, you should run the command `nvm use`.
 
 1. Install dependencies using the command `npm install`
 2. Run `npm run dev`

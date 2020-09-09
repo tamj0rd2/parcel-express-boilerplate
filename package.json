@@ -5,7 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel -p 8080 watch ./src/client/index.html"
+    "dev": "ts-node -P ./src/server/tsconfig.json ./src/server/dev.ts",
+    "build": "tsc -b ./src/server/tsconfig.json",
+    "start": "NODE_ENV=production node -r source-map-support/register ./out/server/index.js"
+  },
+  "_moduleAliases": {
+    "~shared": "./out/shared",
+    "~server": "./out/server"
+  },
+  "engines": {
+    "node": "12"
   },
   "repository": {
     "type": "git",
@@ -19,6 +28,18 @@
   },
   "homepage": "https://github.com/tamj0rd2/threads-poc#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.6.4",
+    "@types/parcel-bundler": "^1.12.1",
+    "@types/tsc-watch": "^4.2.0",
+    "parcel-bundler": "^1.12.4",
+    "ts-node": "^9.0.0",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "source-map-support": "^0.5.19"
   }
 }
