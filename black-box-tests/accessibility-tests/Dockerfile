@@ -14,6 +14,9 @@ RUN apk update && apk upgrade && \
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
+# necessary for the wait-for script to work
+RUN apk add netcat-openbsd
+
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app

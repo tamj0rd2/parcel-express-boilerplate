@@ -1,5 +1,7 @@
 FROM node:12.18.3-alpine as base
 
+RUN apk add util-linux
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 ENV HUSKY_SKIP_INSTALL=true

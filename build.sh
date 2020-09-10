@@ -33,15 +33,15 @@ print $BLUE 'running unit tests'
 docker-compose $DC_FLAGS build -q unit-tests
 docker-compose $DC_FLAGS run unit-tests
 
-#== Uncomment this block once we have some cdcs
+#== Uncomment this block once you have some cdcs
 # print $BLUE 'running cdcs'
-# docker-compose $DC_FLAGS build -q --parallel dss-cdc iss-cdc peqs-cdc intel-store-cdc yahoo-cdc
-# docker-compose $DC_FLAGS up dss-cdc iss-cdc peqs-cdc intel-store-cdc yahoo-cdc
+# docker-compose $DC_FLAGS build -q --parallel my-cdc-name
+# docker-compose $DC_FLAGS up my-cdc-name
 # CDC_FAIL_COUNT=$(docker-compose ps -q | xargs docker inspect -f '{{ .State.ExitCode }}' | grep -v 0 | wc -l | tr -d '[:space:]')
 # if [ $CDC_FAIL_COUNT -ne 0 ]; then exit 1; fi
 #==
 
-#== Uncomment this block we have some integration tests
+#== Uncomment this block once you have some integration tests
 # print $BLUE 'running integration tests'
 # docker-compose $DC_FLAGS build -q integration-tests
 # docker-compose $DC_FLAGS run integration-tests
@@ -49,15 +49,13 @@ docker-compose $DC_FLAGS run unit-tests
 
 print $BLUE 'starting web'
 #== dependency services should be added to the below line
-# example: docker-compose $DC_FLAGS build -q --parallel web dss iss peqs intel-store yahoo individual
+# example: docker-compose $DC_FLAGS build -q --parallel web some-service another-service
 docker-compose $DC_FLAGS build -q --parallel web
 docker-compose $DC_FLAGS up -d web
 #==
 
 print $BLUE 'running accessibility and acceptance tests'
-# docker-compose $DC_FLAGS build -q --parallel accessibility-tests acceptance-tests
-# docker-compose $DC_FLAGS up accessibility-tests acceptance-tests
-docker-compose $DC_FLAGS build -q --parallel acceptance-tests
-docker-compose $DC_FLAGS up acceptance-tests
+docker-compose $DC_FLAGS build -q --parallel accessibility-tests acceptance-tests
+docker-compose $DC_FLAGS up accessibility-tests acceptance-tests
 ENDGAME_FAIL_COUNT=$(docker-compose ps -q | xargs docker inspect -f '{{ .State.ExitCode }}' | grep -v 0 | wc -l | tr -d '[:space:]')
 if [ $ENDGAME_FAIL_COUNT -ne 0 ]; then exit 1; fi

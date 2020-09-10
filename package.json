@@ -1,5 +1,5 @@
 {
-  "name": "threads-poc",
+  "name": "your-app-name",
   "private": true,
   "scripts": {
     "test": "jest",
@@ -29,17 +29,9 @@
   "engines": {
     "node": "12"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tamj0rd2/threads-poc.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tamj0rd2/threads-poc/issues"
-  },
-  "homepage": "https://github.com/tamj0rd2/threads-poc#readme",
   "devDependencies": {
     "@testing-library/react": "^11.0.2",
     "@types/express": "^4.17.8",

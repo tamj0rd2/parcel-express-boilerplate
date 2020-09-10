@@ -29,6 +29,9 @@ services:
       - web
     environment:
       - WEB_HOST=http://web:8080
+    volumes:
+      - ./scripts/wait-for.sh:/usr/src/app/wait-for.sh
+    command: ./wait-for.sh web:8080 -- npm run test:ci
 
   acceptance-tests:
     build: black-box-tests/acceptance-tests

@@ -1,9 +1,22 @@
-# Threads
+# your-app-name
 
-![CI](https://github.com/tamj0rd2/threads-poc/workflows/CI/badge.svg)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=tamj0rd2/threads-poc)](https://dependabot.com)
+Site URL: https://example.com
 
-Site URL: https://threads-poc.herokuapp.com/
+## About this template
+
+This template uses:
+
+- Node 12 LTS
+- Typescript 4
+- Parcel frontend with React
+- Express backend
+
+### Using this template
+
+1. Replace all occurrences of `your-app-name` with your actual app name
+2. Uncomment the "deployment" block in .github/workflows/ci.yml if you would like
+   to deploy to heroku after each push to master
+3. Delete the "About this template" section of the README :)
 
 ## Development
 

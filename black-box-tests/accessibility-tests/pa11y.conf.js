@@ -10,15 +10,9 @@ module.exports = {
       executablePath: '/usr/bin/chromium-browser',
       args: ['--no-sandbox'],
     },
-  },
-  urls: [
-    {
-      url: WEB_HOST,
-      viewport: {
-        width: 1280,
-        height: 1024,
-      },
-      actions: ['wait for element h1 to be visible'],
+    headers: {
+      Authorization: `Basic ${Buffer.from(`username:password`).toString('base64')}`,
     },
-  ],
+  },
+  urls: [WEB_HOST],
 }

@@ -6,3 +6,5 @@ doc
 dist
 .cache
 coverage
+docker-compose*
+**/Dockerfile

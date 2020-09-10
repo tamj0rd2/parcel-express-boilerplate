@@ -29,16 +29,17 @@ jobs:
       - name: Acceptance tests failed
         if: ${{ failure() }}
         run: docker-compose -f docker-compose.yml logs -t web
-      # - name: Accessibility tests tests
-      #   run: docker-compose -f docker-compose.yml up --build --exit-code-from acceptance-tests acceptance-tests
+      - name: Accessibility tests tests
+        run: docker-compose -f docker-compose.yml up --build --exit-code-from accessibility-tests accessibility-tests
 
-  deploy:
-    if: ${{ github.ref == 'refs/heads/master' }}
-    needs: tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to heroku
-        run: ./scripts/deploy.sh
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_APP_TOKEN }}
+  #== uncomment this block to enable deploying to heroku
+  # deploy:
+  #   if: ${{ github.ref == 'refs/heads/master' }}
+  #   needs: tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Deploy to heroku
+  #       run: ./scripts/deploy.sh
+  #       env:
+  #         HEROKU_API_KEY: ${{ secrets.HEROKU_APP_TOKEN }}
