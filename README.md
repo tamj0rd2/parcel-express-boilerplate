@@ -1,5 +1,8 @@
 # Threads
 
+![CI](https://github.com/tamj0rd2/threads-poc/workflows/CI/badge.svg)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=tamj0rd2/threads-poc)](https://dependabot.com)
+
 Site URL: https://threads-poc.herokuapp.com/
 
 ## Development
