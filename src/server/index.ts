@@ -11,10 +11,6 @@ const bundler = new Bundler('src/client/index.html', {
 })
 
 const app = express()
-app.use((req, res, next) => {
-  console.log(`Received request for ${req.originalUrl}`)
-  next()
-})
 app.use(createMiddlewares(config))
 app.use('/logout', logoutHandler)
 app.use('/api', createApiRouter())
