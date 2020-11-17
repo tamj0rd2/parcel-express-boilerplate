@@ -1,4 +1,4 @@
-FROM node:12.19.0-alpine
+FROM node:12.19.1-alpine
 
 # Installs latest Chromium (72) package.
 RUN apk update && apk upgrade && \
