@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-pino-logger": "^5.0.0",
+    "express-pino-logger": "^6.0.0",
     "module-alias": "^2.2.2",
     "pino-pretty": "^4.4.0",
     "react": "^17.0.1",
