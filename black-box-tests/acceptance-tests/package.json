@@ -10,7 +10,7 @@
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
     "@babel/preset-env": "^7.12.16",
-    "@babel/preset-typescript": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.17",
     "@cypress/browserify-preprocessor": "^2.1.4",
     "cypress-watch-and-reload": "^1.2.17",
     "tsify": "^5.0.2",
