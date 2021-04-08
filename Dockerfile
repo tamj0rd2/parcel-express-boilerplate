@@ -1,4 +1,4 @@
-FROM node:12.22.0-alpine as base
+FROM node:12.22.1-alpine as base
 
 RUN apk add util-linux
 
