@@ -9,7 +9,7 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.14.4",
-    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-env": "^7.14.5",
     "@babel/preset-typescript": "^7.13.0",
     "@cypress/browserify-preprocessor": "^2.1.4",
     "cypress-watch-and-reload": "^1.2.17",
