@@ -1,0 +1,67 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - ">=13.x"
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.0.0
+    - 8.1.0
+    - 8.2.0
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: node
+    versions:
+    - ">=13"
+- package-ecosystem: npm
+  directory: "/black-box-tests/acceptance-tests"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - ">=13.x"
+- package-ecosystem: docker
+  directory: "/black-box-tests/acceptance-tests"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: node
+    versions:
+    - ">=13"
+  - dependency-name: cypress/included
+    versions:
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+    - 6.7.1
+- package-ecosystem: npm
+  directory: "/black-box-tests/accessibility-tests"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - ">=13.x"
+- package-ecosystem: docker
+  directory: "/black-box-tests/accessibility-tests"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: node
+    versions:
+    - ">=13"
