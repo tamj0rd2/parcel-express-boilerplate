@@ -1,4 +1,4 @@
-FROM cypress/included:7.6.0
+FROM cypress/included:7.7.0
 
 # necessary for the wait-for script to work
 RUN apt-get -q update && apt-get -qy install netcat
