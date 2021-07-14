@@ -11,7 +11,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-typescript": "^7.14.5",
-    "@cypress/browserify-preprocessor": "^2.1.4",
+    "@cypress/browserify-preprocessor": "^3.0.1",
     "cypress-watch-and-reload": "^1.2.17",
     "tsify": "^5.0.4",
     "typescript": "^4.3.5"
